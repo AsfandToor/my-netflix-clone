@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { fetchTrending, fetchActionMovies, fetchOriginals, fetchComedyMovies, fetchDocumentaries, fetchHorroMovies, fetchRomanceMovies, fetchTopRated } from './actions/index'
+import './vendor/fontawesome-free/css/all.min.css'
+import Navbar from './components/Navbar/Navbar'
+import Billboard from './components/Billboard/Billboard'
+import Row from './components/Row/Row'
+import './App.css'
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+        <Navbar />
+        <Billboard fetchMovies={fetchTrending}/>
+        <div className="movie-rows">
+          <Row  fetchMovies={fetchActionMovies} title="Action Movies"/>
+          <Row  fetchMovies={fetchComedyMovies} title="Comedy Movies"/>
+          <Row  fetchMovies={fetchDocumentaries} title="Documentaries"/>
+          <Row  fetchMovies={fetchHorroMovies} title="Horror Movies"/>
+        </div>
+    </React.Fragment>
+  )
 }
 
-export default App;
+export default App

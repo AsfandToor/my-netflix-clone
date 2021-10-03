@@ -1,0 +1,78 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.8rem;
+    padding: 0 4.1rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.nav-item-small {
+    display: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #e5e5e5;
+}
+
+.active {
+    font-weight: 700;
+}
+
+.logo {
+    width: 12rem;
+    margin-right: 25px;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.search-icon, .dvd-icon, .notfication-icon, .user-icon {
+    margin-right: 2rem;
+}
+
+.dvd-icon, .dropdown {
+    font-size: 1.4rem;
+}
+
+.search-icon, .notfication-icon {
+    font-size: 2.0rem;
+}
+
+.user-img {
+    width: 3.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+@media (max-width: 978px){
+    .nav-item {
+        display: none;
+    }
+    .nav-item-small {
+        display: inline-block;
+    }
+}
